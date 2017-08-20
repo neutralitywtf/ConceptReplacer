@@ -1,0 +1,82 @@
+{
+	"name": "men",
+	"title": "Men",
+	"definitions": {
+		"negative_terminology": {
+			"singular": [ "sexism", "chauvinism", "misandry" ]
+		},
+		"respectful": {
+			"singular": [ "gentleman" ],
+			"plural": [ "gentlemen" ]
+		},
+		"colloquial": {
+			"singular": [ "guy" ],
+			"plural": [ "guys" ]
+		},
+		"royalty": {
+			"singular": [ "lord" ],
+			"plural": [ "lords" ]
+		},
+		"royalty_ruler": {
+			"singular": [ "king" ],
+			"plural": [ "kings" ]
+		},
+		"grandparent": {
+			"singular": [ "grandfather", "grandpa", "grandpop" ],
+			"plural": [ "grandfathers", "grandpas", "grandpops" ]
+		},
+		"parent": {
+			"singular": [ "father", "dad" ],
+			"plural": [ "fathers", "dads" ]
+		},
+		"biology": {
+			"singular": [ "male" ],
+			"plural": [ "males" ]
+		},
+		"adult": {
+			"singular": [ "man" ],
+			"plural": [ "men" ]
+		},
+		"child": {
+			"singular": [ "boy" ],
+			"plural": [ "boys" ]
+		},
+		"sibling": {
+			"singular": [ "brother" ],
+			"plural": [ "brothers" ]
+		},
+		"demeaning": {
+			"singular": [ "dude", "bro" ],
+			"plural": [ "dudes", "bros" ]
+		},
+		"possessive_self": {
+			"singular": [ "husband" ],
+			"plural": [ "husbands" ]
+		},
+		"activist": {
+			"singular": [ "meninist" ],
+			"plural": [ "meninists" ]
+		},
+		"activism": {
+			"singular": [ "meninism" ]
+		},
+		"pronoun": {
+			"singular": [ "he" ]
+		},
+		"pronoun_who": {
+			"singular": [ "him" ]
+		},
+		"pronoun_who_self": {
+			"singular": [ "himself" ]
+		},
+		"pronoun_who_his-something": {
+			"singular": [ "his" ]
+		},
+		"pronoun_whose": {
+			"singular": [ "his" ]
+		},
+		"adverb": {
+			"singular": [ "manly", "boyish" ]
+		}
+	}
+}

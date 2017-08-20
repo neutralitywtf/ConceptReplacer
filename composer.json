@@ -1,0 +1,17 @@
+{
+	"name"       : "ConceptReplacer",
+	"description": "",
+	"type"       : "",
+	"license"    : "GPL-3.0+",
+	"autoload": {
+		"psr-4": {
+			"ConceptReplacer\\": "includes/"
+		}
+	},
+	"scripts": {
+		"test": "phpunit"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^6.0"
+	}
+}

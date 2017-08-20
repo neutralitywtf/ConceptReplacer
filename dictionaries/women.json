@@ -1,0 +1,82 @@
+{
+	"name": "women",
+	"title": "Women",
+	"definitions": {
+		"negative_terminology": {
+			"singular": [ "sexism", "misogyny" ]
+		},
+		"respectful": {
+			"singular": [ "lady" ],
+			"plural": [ "ladies" ]
+		},
+		"colloquial": {
+			"singular": [ "gal" ],
+			"plural": [ "gals" ]
+		},
+		"royalty": {
+			"singular": [ "lady" ],
+			"plural": [ "ladies" ]
+		},
+		"royalty_ruler": {
+			"singular": [ "queen" ],
+			"plural": [ "queens" ]
+		},
+		"grandparent": {
+			"singular": [ "grandmother", "grandma", "grandmom" ],
+			"plural": [ "grandmothers", "grandmas", "grandmoms" ]
+		},
+		"parent": {
+			"singular": [ "mother", "mom" ],
+			"plural": [ "mothers", "moms" ]
+		},
+		"biology": {
+			"singular": [ "female" ],
+			"plural": [ "females" ]
+		},
+		"adult": {
+			"singular": [ "woman" ],
+			"plural": [ "women" ]
+		},
+		"child": {
+			"singular": [ "girl" ],
+			"plural": [ "girls" ]
+		},
+		"sibling": {
+			"singular": [ "sister" ],
+			"plural": [ "sisters" ]
+		},
+		"demeaning": {
+			"singular": [ "chick", "broad", "ho" ],
+			"plural": [ "chicks", "broads", "hos", "hoes" ]
+		},
+		"possessive_self": {
+			"singular": [ "wife" ],
+			"plural": [ "wives" ]
+		},
+		"activist": {
+			"singular": [ "feminist" ],
+			"plural": [ "feminists" ]
+		},
+		"activism": {
+			"singular": [ "feminism" ]
+		},
+		"pronoun": {
+			"singular": [ "she" ]
+		},
+		"pronoun_who": {
+			"singular": [ "she" ]
+		},
+		"pronoun_who_self": {
+			"singular": [ "herself" ]
+		},
+		"pronoun_who_his-something": {
+			"singular": [ "her" ]
+		},
+		"pronoun_whose": {
+			"singular": [ "hers" ]
+		},
+		"adverb": {
+			"singular": [ "womanly", "girly" ]
+		}
+	}
+}
