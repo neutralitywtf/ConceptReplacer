@@ -53,6 +53,10 @@
 			"singular": [ "husband" ],
 			"plural": [ "husbands" ]
 		},
+		"possessive_self_minor": {
+			"singular": [ "boyfriend" ],
+			"plural": [ "boyfriends" ]
+		},
 		"activist": {
 			"singular": [ "meninist" ],
 			"plural": [ "meninists" ]

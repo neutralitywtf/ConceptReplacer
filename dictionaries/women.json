@@ -53,6 +53,10 @@
 			"singular": [ "wife" ],
 			"plural": [ "wives" ]
 		},
+		"possessive_self_minor": {
+			"singular": [ "girlfriend" ],
+			"plural": [ "girlfrends" ]
+		},
 		"activist": {
 			"singular": [ "feminist" ],
 			"plural": [ "feminists" ]
@@ -64,7 +68,7 @@
 			"singular": [ "she" ]
 		},
 		"pronoun_who": {
-			"singular": [ "she" ]
+			"singular": [ "her" ]
 		},
 		"pronoun_who_self": {
 			"singular": [ "herself" ]
