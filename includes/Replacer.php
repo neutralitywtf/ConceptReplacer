@@ -10,8 +10,9 @@ class Replacer {
 	protected static function parseHTML( $doc, $html ) {
 		// set error level
 		$internalErrors = libxml_use_internal_errors(true);
-
-		$doc->loadHTML( mb_convert_encoding( $html, 'HTML-ENTITIES', 'UTF-8') );
+		if ( !empty( $html ) ) {
+			$doc->loadHTML( mb_convert_encoding( $html, 'HTML-ENTITIES', 'UTF-8') );
+		}
 
 		// Restore error level
 		libxml_use_internal_errors($internalErrors);
@@ -22,6 +23,10 @@ class Replacer {
 	 * words, according to chosen type.
 	 */
 	public static function replaceTerms( $originalHtml, Dictionary $searchDictionary, Dictionary $replaceDictionary ) {
+
+		if ( empty( $originalHtml ) ) {
+			return $originalHtml;
+		}
 
 		$doc = new \DOMDocument();
 		static::parseHTML( $doc, $originalHtml );
@@ -125,6 +130,10 @@ class Replacer {
 	public static function fixLinks( $scheme, $host, $originalHtml ) {
 		$domain = $scheme . '://' . $host;
 
+		if ( empty( $originalHtml ) ) {
+			return $originalHtml;
+		}
+
 		$doc = new \DOMDocument();
 		static::parseHTML( $doc, $originalHtml );
 
@@ -147,6 +156,10 @@ class Replacer {
 	}
 
 	public static function addExtras( $originalHtml ) {
+		if ( empty( $originalHtml ) ) {
+			return $originalHtml;
+		}
+
 		$doc = new \DOMDocument();
 		$doc->loadXML( $originalHtml );
 		$body = $doc->getElementsByTagName( 'body' )->item( 0 );

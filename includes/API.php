@@ -12,16 +12,24 @@ class API {
 
 	protected $recognizedModules = [ 'swapgender' ];
 
-	public function __construct( $url, $module = 'swapgender', $localize = false ) {
+	protected $fetcher;
+
+	public function __construct( $url, $module = 'swapgender', $localize = false, $isMobile = false ) {
 		$this->manager = new DictionaryManager();
 		$this->url = $url;
 		$this->module = $this->isRecognizedModule( $module ) ? $module : 'swapgender';
 		$this->localize = $localize;
+		$this->mobile = $isMobile;
+
+		$this->fetcher = new Fetcher();
 	}
 
 	public function process() {
 		$output = $this->prep();
 
+		if ( $this->fetcher->isError() ) {
+			return 'ERROR: ' . $this->fetcher->getError();
+		}
 		if ( $this->localize ) {
 			$parse = parse_url( $this->url );
 			$output = Replacer::fixLinks(
@@ -36,8 +44,11 @@ class API {
 	}
 
 	protected function prep() {
-		$output = Fetcher::fetch( $this->url );
-		$output = Replacer::removeScripts( $output );
+		$output = $this->fetcher->fetch( $this->url, $this->mobile );
+
+		if ( !$this->fetcher->isError() ) {
+			$output = Replacer::removeScripts( $output );
+		}
 
 		return $output;
 	}
