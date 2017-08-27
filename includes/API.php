@@ -43,6 +43,21 @@ class API {
 		return $output;
 	}
 
+	/**
+	 * Check whether a requested URL is in a specified domain
+	 * @param [type] $url [description]
+	 * @return boolean [description]
+	 */
+	public static function isInDomain( $domain, $url ) {
+		$parse = parse_url( $url );
+		return strpos( $parse[ 'host' ], $domain ) !== false;
+	}
+
+	/**
+	 * Prepare the url for processing
+	 *
+	 * @return string Prepared HTML
+	 */
 	protected function prep() {
 		$output = $this->fetcher->fetch( $this->url, $this->mobile );
 
