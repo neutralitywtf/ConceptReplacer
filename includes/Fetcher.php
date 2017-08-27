@@ -2,6 +2,8 @@
 
 namespace ConceptReplacer;
 
+use ErrorException;
+
 class Fetcher {
 	/**
 	 * Reads the source of a remote URL, strips <script>
@@ -12,7 +14,7 @@ class Fetcher {
 	 */
 	public function fetch( $url, $isMobile = false ) {
 		if ( !function_exists( 'curl_init' ) ){
-			return false; // die( 'Missing cURL module.' );
+			throw new ErrorException( "The PHP 7 curl extension (php7.0-curl) is required." );
 		}
 
 		$userAgent = $isMobile ?
