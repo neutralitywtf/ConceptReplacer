@@ -1,17 +1,23 @@
 {
-	"name"       : "ConceptReplacer",
-	"description": "",
-	"type"       : "",
-	"license"    : "GPL-3.0+",
+	"name": "ConceptReplacer",
+	"type": "project",
+	"description": "A system to replace terminology with another from a website, based on dictionaries.",
+	"license": "GPL-3.0+",
 	"autoload": {
 		"psr-4": {
 			"ConceptReplacer\\": "includes/"
 		}
+	},
+	"support": {
+		"issues": "https://github.com/neutralitywtf/ConceptReplacer/issues"
 	},
 	"scripts": {
 		"test": "phpunit"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "^6.0"
+	},
+	"require": {
+		"php": "^7.0"
 	}
 }
