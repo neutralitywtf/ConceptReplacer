@@ -35,6 +35,9 @@ class Fetcher {
 		/* Don't include header */
 		curl_setopt( $ch, CURLOPT_HEADER, 0 );
 
+		/* Follow HTTP redirects */
+		curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, true );
+
 		/* Return the data (do not print) */
 		curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true);
 
