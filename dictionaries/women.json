@@ -29,6 +29,10 @@
 			"singular": [ "mother", "mom" ],
 			"plural": [ "mothers", "moms" ]
 		},
+		"own_child": {
+			"singular": [ "daughter" ],
+			"plural": [ "daughters" ]
+		},
 		"biology": {
 			"singular": [ "female" ],
 			"plural": [ "females" ]

@@ -29,6 +29,10 @@
 			"singular": [ "father", "dad" ],
 			"plural": [ "fathers", "dads" ]
 		},
+		"own_child": {
+			"singular": [ "son" ],
+			"plural": [ "sons" ]
+		},
 		"biology": {
 			"singular": [ "male" ],
 			"plural": [ "males" ]
