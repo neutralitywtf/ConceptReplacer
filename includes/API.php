@@ -38,6 +38,8 @@ class API {
 				$output
 			);
 		}
+
+		$output = Replacer::addStylesheet( $output );
 		$output = $this->runModule( $output );
 
 		return $output;

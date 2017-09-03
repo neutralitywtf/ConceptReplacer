@@ -54,10 +54,6 @@ class Replacer {
 							$data[ $opt ][ 0 ],
 							self::$usedReplacedTerms
 						)
-						// !in_array(
-						// 	$data[ $opt ][ 0 ],
-						// 	self::$usedReplacingTerms
-						// ) &&
 					) {
 						if ( count( $data[ $opt ] ) > 1 ) {
 							$regexSearch = '(' . join( array_map( 'preg_quote', $data[ $opt ] ), '|' ) . ')';
@@ -76,11 +72,12 @@ class Replacer {
 
 						$nodeContent = preg_replace_callback(
 							"/\b$regexSearch\b/i",
-								function( $match ) use ( $replaceWordsArray, $doc ) {
+								function( $match ) use ( $replaceWordsArray, $doc, $searchDictionary ) {
 									return self::randomReplace(
 										$doc,
 										$match,
-										$replaceWordsArray
+										$replaceWordsArray,
+										$searchDictionary
 									);
 								},
 							$nodeContent
@@ -139,6 +136,8 @@ class Replacer {
 
 		$base = $doc->createElement('base');
 		$base->setAttribute( 'href', $domain );
+		// Open iframe links in a new window
+		$base->setAttribute( 'target', '_blank' );
 
 		$head = $doc->getElementsByTagName('head')->item(0);
 		if ( !$head ) {
@@ -155,23 +154,49 @@ class Replacer {
 		return $doc->saveHTML();
 	}
 
-	public static function addExtras( $originalHtml ) {
+	public static function addStylesheet( $originalHtml ) {
 		if ( empty( $originalHtml ) ) {
 			return $originalHtml;
 		}
 
-		$doc = new \DOMDocument();
-		$doc->loadXML( $originalHtml );
-		$body = $doc->getElementsByTagName( 'body' )->item( 0 );
-		// $body->setAttribute(
-		// 	'style',
-		// 	// TODO: Make this configurable, and in a file
-		// 	'.conceptreplacer-replaced {' .
-		// 	'	border-bottom: 1px dashed #222;' .
-		// 	'	font-size: 1.2em;' .
-		// 	'}'
-		// );
+		// TODO: Find a better, customizable way to do this
+		$styles = [
+			'.conceptreplacer-replaced' => [
+				'background-color' => 'rgba(139, 195, 74, 0.5)',
+				'padding' => '0 0.2em;',
+			],
+			'.conceptreplacer-replaced.conceptreplacer-ambiguous' => [
+				'background-color' => 'rgba(255, 193, 7, 0.5)',
+			]
+		];
 
+		$style = '';
+		foreach ( $styles as $class => $rules ) {
+			$style .= $class . "{\n";
+			foreach ( $rules as $prop => $val ) {
+				$style .= "$prop: $val;\n";
+			}
+			$style .= "}\n";
+		}
+
+		$doc = new \DOMDocument();
+		static::parseHTML( $doc, $originalHtml );
+
+		$stylesheet = $doc->createElement( 'style', $style );
+		$stylesheet->setAttribute( 'type', 'text/css' );
+
+		$head = $doc->getElementsByTagName('head')->item(0);
+		if ( !$head ) {
+			$html = $doc->getElementsByTagName( 'html' )->item( 0 );
+			$head = $doc->createElement( 'head' );
+			$html->insertBefore( $head, $html->firstChild );
+		}
+
+		if ( $head->hasChildNodes() ) {
+			$head->insertBefore( $stylesheet, $head->firstChild );
+		} else {
+			$head->appendChild( $stylesheet );
+		}
 		return $doc->saveHTML();
 	}
 
@@ -182,14 +207,14 @@ class Replacer {
 	 * @param array $replaceWordsArray Replacement options
 	 * @return DOMNode Replacement
 	 */
-	protected static function randomReplace( DOMDocument $doc, array $match, array $replaceWordsArray ) {
+	protected static function randomReplace( DOMDocument $doc, array $match, array $replaceWordsArray, $searchDictionary ) {
 		$randomIndex = array_rand( $replaceWordsArray );
 		$replacementWord = $replaceWordsArray[ $randomIndex ];
 
-		$styles = [
-			'background-color: rgba(139, 195, 74, 0.5);',
-			'padding: 0 0.2em;'
-		];
+		// $styles = [
+		// 	'background-color: rgba(139, 195, 74, 0.5);',
+		// 	'padding: 0 0.2em;'
+		// ];
 
 		if ( ctype_upper( substr( $match[ 0 ], 0, 1 ) ) ) {
 			$replacementWord = ucfirst( $replacementWord );
@@ -198,8 +223,13 @@ class Replacer {
 
 		$span = $doc->createElement( 'span' );
 		$span->setAttribute( 'title', 'Original: ' . addslashes( $match[0] ) );
-		$span->setAttribute( 'style', join( ' ', $styles ) );
-		$span->setAttribute( 'class', 'conceptreplacer-replaced' );
+
+		$classes = [ 'conceptreplacer-replaced' ];
+
+		if ( $searchDictionary->isAmbiguous( $match[0] ) ) {
+			$classes[] = 'conceptreplacer-ambiguous';
+		}
+		$span->setAttribute( 'class', implode( ' ', $classes ) );
 
 		$text = $doc->createTextNode( $replacementWord );
 		$span->appendChild( $text );

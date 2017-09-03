@@ -1,6 +1,7 @@
 {
 	"name": "women",
 	"title": "Women",
+	"ambiguous": [ "her" ],
 	"definitions": {
 		"negative_terminology": {
 			"singular": [ "sexism", "misogyny" ]

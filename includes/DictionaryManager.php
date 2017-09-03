@@ -52,7 +52,7 @@ class DictionaryManager {
 				isset( $data[ 'name' ] ) &&
 				isset( $data[ 'definitions' ] )
 			) {
-				$this->dictionaries[ strtolower( $data[ 'name' ] ) ] = new Dictionary( $data[ 'name' ], $data[ 'definitions' ] );
+				$this->dictionaries[ strtolower( $data[ 'name' ] ) ] = new Dictionary( $data );
 			}
 		}
 	}

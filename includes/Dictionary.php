@@ -5,14 +5,20 @@ namespace ConceptReplacer;
 class Dictionary {
 	protected $dir = '';
 	protected $dictionaries;
+	protected $ambiguous;
 
 	/**
 	 * Set up the contents of the available dictionaries
 	 * for reading.
 	 */
-	public function __construct( $name, $definition ) {
-		$this->name = $name;
-		$this->definition = $definition;
+	public function __construct( $data ) {
+		$this->name = $data[ 'name' ];
+		$this->definition = $data[ 'definitions' ];
+
+		$this->ambiguous = [];
+		if ( isset( $data[ 'ambiguous' ] ) ) {
+			$this->ambiguous = $data[ 'ambiguous' ];
+		}
 	}
 
 	/**
@@ -23,7 +29,6 @@ class Dictionary {
 	public function getName() {
 		return $this->name;
 	}
-
 	/**
 	 * Get the array of terms belonging to a dictionary
 	 * group and category
@@ -74,6 +79,13 @@ class Dictionary {
 	 */
 	public function getDefinition() {
 		return $this->definition;
+	}
+
+	/**
+	 * Check if the term is in the ambiguous list
+	 */
+	public function isAmbiguous( $term ) {
+		return in_array( $term, $this->ambiguous );
 	}
 
 	/**
