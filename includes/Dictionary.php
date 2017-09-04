@@ -85,7 +85,7 @@ class Dictionary {
 	 * Check if the term is in the ambiguous list
 	 */
 	public function isAmbiguous( $term ) {
-		return in_array( $term, $this->ambiguous );
+		return in_array( strtolower( $term ), $this->ambiguous );
 	}
 
 	/**
