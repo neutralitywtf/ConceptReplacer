@@ -5,6 +5,13 @@
 		"negative_terminology": {
 			"singular": [ "sexism", "chauvinism", "misandry" ]
 		},
+		"title": {
+			"singular": [ "Mr" ],
+		},
+		"honor": {
+			"singular": [ "sir" ],
+			"plural": [ "sirs" ]
+		},
 		"respectful": {
 			"singular": [ "gentleman" ],
 			"plural": [ "gentlemen" ]
@@ -85,6 +92,10 @@
 		},
 		"adverb": {
 			"singular": [ "manly", "boyish" ]
+		},
+		"super": {
+			"singular": [ "superman" ],
+			"plural": [ "supermen" ]
 		}
 	}
 }

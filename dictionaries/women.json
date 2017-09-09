@@ -6,6 +6,13 @@
 		"negative_terminology": {
 			"singular": [ "sexism", "misogyny" ]
 		},
+		"title": {
+			"singular": [ "Mrs" ],
+		},
+		"honor": {
+			"singular": [ "madam" ],
+			"plural": [ "madams" ]
+		},
 		"respectful": {
 			"singular": [ "lady" ],
 			"plural": [ "ladies" ]
@@ -86,6 +93,10 @@
 		},
 		"adverb": {
 			"singular": [ "womanly", "girly" ]
+		},
+		"super": {
+			"singular": [ "superwoman" ],
+			"plural": [ "superwomen" ]
 		}
 	}
 }
