@@ -6,7 +6,7 @@
 			"singular": [ "sexism", "chauvinism", "misandry" ]
 		},
 		"title": {
-			"singular": [ "Mr" ],
+			"singular": [ "Mr" ]
 		},
 		"honor": {
 			"singular": [ "sir" ],
@@ -97,7 +97,7 @@
 			"singular": [ "superman" ],
 			"plural": [ "supermen" ]
 		},
-		"profession_salesman": {
+		"profession_sales": {
 			"singular": [ "salesman" ],
 			"plural": [ "salesmen" ]
 		}
