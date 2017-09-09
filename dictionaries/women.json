@@ -97,6 +97,10 @@
 		"super": {
 			"singular": [ "superwoman" ],
 			"plural": [ "superwomen" ]
+		},
+		"profession_sales": {
+			"singular": [ "saleswoman" ],
+			"plural": [ "saleswomen" ]
 		}
 	}
 }

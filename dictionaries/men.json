@@ -96,6 +96,10 @@
 		"super": {
 			"singular": [ "superman" ],
 			"plural": [ "supermen" ]
+		},
+		"profession_salesman": {
+			"singular": [ "salesman" ],
+			"plural": [ "salesmen" ]
 		}
 	}
 }
