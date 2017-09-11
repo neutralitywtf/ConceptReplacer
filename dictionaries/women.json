@@ -29,13 +29,21 @@
 			"singular": [ "queen" ],
 			"plural": [ "queens" ]
 		},
-		"grandparent": {
-			"singular": [ "grandmother", "grandma", "grandmom" ],
-			"plural": [ "grandmothers", "grandmas", "grandmoms" ]
+		"grandparent_formal": {
+			"singular": [ "grandmother" ],
+			"plural": [ "grandmothers" ]
 		},
-		"parent": {
-			"singular": [ "mother", "mom" ],
-			"plural": [ "mothers", "moms" ]
+		"grandparent_familiar": {
+			"singular": [ "grandma", "grandmom" ],
+			"plural": [ "grandmas", "grandmoms" ]
+		},
+		"parent_formal": {
+			"singular": [ "mother" ],
+			"plural": [ "mothers" ]
+		},
+		"parent_familiar": {
+			"singular": [ "mom" ],
+			"plural": [ "moms" ]
 		},
 		"own_child": {
 			"singular": [ "daughter" ],
