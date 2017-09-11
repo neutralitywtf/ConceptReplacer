@@ -28,13 +28,21 @@
 			"singular": [ "king" ],
 			"plural": [ "kings" ]
 		},
-		"grandparent": {
-			"singular": [ "grandfather", "grandpa", "grandpop" ],
-			"plural": [ "grandfathers", "grandpas", "grandpops" ]
+		"grandparent_formal": {
+			"singular": [ "grandfather" ],
+			"plural": [ "grandfathers" ]
 		},
-		"parent": {
-			"singular": [ "father", "dad" ],
-			"plural": [ "fathers", "dads" ]
+		"grandparent_familiar": {
+			"singular": [ "grandpa", "grandpop" ],
+			"plural": [ "grandpas", "grandpops" ]
+		},
+		"parent_formal": {
+			"singular": [ "father" ],
+			"plural": [ "fathers" ]
+		},
+		"parent_familiar": {
+			"singular": [ "dad" ],
+			"plural": [ "dads" ]
 		},
 		"own_child": {
 			"singular": [ "son" ],
