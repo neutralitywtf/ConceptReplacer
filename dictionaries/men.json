@@ -101,6 +101,9 @@
 		"adverb": {
 			"singular": [ "manly", "boyish" ]
 		},
+		"adjective": {
+			"singular": [ "masculine" ]
+		},
 		"super": {
 			"singular": [ "superman" ],
 			"plural": [ "supermen" ]
@@ -108,6 +111,10 @@
 		"profession_sales": {
 			"singular": [ "salesman" ],
 			"plural": [ "salesmen" ]
+		},
+		"college_club": {
+			"singular": [ "fraternity", "frat" ],
+			"plural": [ "fraternities" ]
 		}
 	}
 }

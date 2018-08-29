@@ -102,6 +102,9 @@
 		"adverb": {
 			"singular": [ "womanly", "girly" ]
 		},
+		"adjective": {
+			"singular": [ "feminine" ]
+		},
 		"super": {
 			"singular": [ "superwoman" ],
 			"plural": [ "superwomen" ]
@@ -109,6 +112,10 @@
 		"profession_sales": {
 			"singular": [ "saleswoman" ],
 			"plural": [ "saleswomen" ]
+		},
+		"college_club": {
+			"singular": [ "sorority" ],
+			"plural": [ "sororities" ]
 		}
 	}
 }
