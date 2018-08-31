@@ -1,0 +1,121 @@
+{
+  "name": "neutral",
+  "title": "Neutral",
+  "ambiguous": [ "their" ],
+  "definitions": {
+    "negative_terminology": {
+      "singular": [ "genderism" ]
+    },
+    "title": {
+      "singular": [ "Mx", "Məx", "Ind" ]
+    },
+    "honor": {
+      "singular": [ "you" ],
+      "plural": [ "you" ]
+    },
+    "respectful": {
+      "singular": [ "gentle" ],
+      "plural": [ "gentles" ]
+    },
+    "colloquial": {
+      "singular": [ "person" ],
+      "plural": [ "persons" ]
+    },
+    "royalty": {
+      "singular": [ "ruler" ],
+      "plural": [ "rulers" ]
+    },
+    "royalty_ruler": {
+      "singular": [ "monarch" ],
+      "plural": [ "monarchs" ]
+    },
+    "grandparent_formal": {
+      "singular": [ "grandparent" ],
+      "plural": [ "grandparents" ]
+    },
+    "grandparent_familiar": {
+      "singular": [ "grandparent" ],
+      "plural": [ "grandparents" ]
+    },
+    "parent_formal": {
+      "singular": [ "parent" ],
+      "plural": [ "parents" ]
+    },
+    "parent_familiar": {
+      "singular": [ "parent" ],
+      "plural": [ "parents" ]
+    },
+    "own_child": {
+      "singular": [ "child" ],
+      "plural": [ "children" ]
+    },
+    "biology": {
+      "singular": [ "cisgender" ],
+      "plural": [ "cisgenders" ]
+    },
+    "adult": {
+      "singular": [ "person" ],
+      "plural": [ "people" ]
+    },
+    "child": {
+      "singular": [ "child" ],
+      "plural": [ "children" ]
+    },
+    "sibling": {
+      "singular": [ "sibling" ],
+      "plural": [ "siblings" ]
+    },
+    "demeaning": {
+      "singular": [ "buddy", "mate", "comrade" ],
+      "plural": [ "buddies", "mates", "folks", "comrades" ]
+    },
+    "possessive_self": {
+      "singular": [ "partner" ],
+      "plural": [ "partner" ]
+    },
+    "possessive_self_minor": {
+      "singular": [ "partner" ],
+      "plural": [ "partner" ]
+    },
+    "activist": {
+      "singular": [ "sexist" ],
+      "plural": [ "sexists" ]
+    },
+    "activism": {
+      "singular": [ "sexism" ]
+    },
+    "pronoun": {
+      "singular": [ "they" ]
+    },
+    "pronoun_who": {
+      "singular": [ "them" ]
+    },
+    "pronoun_who_self": {
+      "singular": [ "themselves" ]
+    },
+    "pronoun_who_his-something": {
+      "singular": [ "their" ]
+    },
+    "pronoun_whose": {
+      "singular": [ "their" ]
+    },
+    "adverb": {
+      "singular": [ "grownup" ]
+    },
+    "adjective": {
+      "singular": [ "genderfluid" ]
+    },
+    "super": {
+      "singular": [ "superperson" ],
+      "plural": [ "superpeople" ]
+    },
+    "profession_sales": {
+      "singular": [ "salesperson" ],
+      "plural": [ "salespeople" ]
+    },
+    "college_club": {
+      "singular": [ "club" ],
+      "plural": [ "clubs" ]
+    }
+  }
+}

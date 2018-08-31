@@ -10,7 +10,7 @@ class API {
 	protected $module = 'swapgender';
 	protected $localize = false;
 
-	protected $recognizedModules = [ 'swapgender' ];
+	protected $recognizedModules = [ 'swapgender', 'neutralgender' ];
 
 	protected $fetcher;
 
@@ -72,6 +72,19 @@ class API {
 
 	protected function runModule( $output = '' ) {
 		switch ( $this->module ) {
+            case 'neutralgender':
+                $output = Replacer::replaceTerms(
+                    $output,
+                    $this->manager->getDictionary( 'women' ),
+                    $this->manager->getDictionary( 'neutral' )
+                );
+
+                $output = Replacer::replaceTerms(
+                    $output,
+                    $this->manager->getDictionary( 'men' ),
+                    $this->manager->getDictionary( 'neutral' )
+                );
+                break;
 			case 'swapgender':
 			default:
 				$output = Replacer::replaceTerms(
