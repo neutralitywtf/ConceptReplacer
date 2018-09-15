@@ -9,7 +9,10 @@
 			"singular": [ "patriarchy" ]
 		},
 		"terminology_adj": {
-			"singular": [ "patriarchical" ]
+			"singular": [ "patriarchical", "patriarchal" ]
+		},
+		"terminology_headoffamily": {
+			"singular": [ "patriarch" ]
 		},
 		"title": {
 			"singular": [ "Mr" ]

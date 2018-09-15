@@ -10,7 +10,10 @@
 			"singular": [ "matriarchy" ]
 		},
 		"terminology_adj": {
-			"singular": [ "matriarchical" ]
+			"singular": [ "matriarchical", "matriarchal" ]
+		},
+		"terminology_headoffamily": {
+			"singular": [ "matriarch" ]
 		},
 		"title": {
 			"singular": [ "Mrs" ]
