@@ -6,6 +6,12 @@
 		"negative_terminology": {
 			"singular": [ "sexism", "misogyny" ]
 		},
+		"terminology": {
+			"singular": [ "matriarchy" ]
+		},
+		"terminology_adj": {
+			"singular": [ "matriarchical" ]
+		},
 		"title": {
 			"singular": [ "Mrs" ]
 		},
@@ -24,6 +30,10 @@
 		"royalty": {
 			"singular": [ "lady" ],
 			"plural": [ "ladies" ]
+		},
+		"royalty_count": {
+			"singular": [ "countess" ],
+			"plural": [ "countesses" ]
 		},
 		"royalty_ruler": {
 			"singular": [ "queen" ],

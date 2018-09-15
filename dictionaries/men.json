@@ -5,6 +5,12 @@
 		"negative_terminology": {
 			"singular": [ "sexism", "chauvinism", "misandry" ]
 		},
+		"terminology": {
+			"singular": [ "patriarchy" ]
+		},
+		"terminology_adj": {
+			"singular": [ "patriarchical" ]
+		},
 		"title": {
 			"singular": [ "Mr" ]
 		},
@@ -23,6 +29,10 @@
 		"royalty": {
 			"singular": [ "lord" ],
 			"plural": [ "lords" ]
+		},
+		"royalty_count": {
+			"singular": [ "earl" ],
+			"plural": [ "earls" ]
 		},
 		"royalty_ruler": {
 			"singular": [ "king" ],
