@@ -12,6 +12,9 @@
 		"terminology_adj": {
 			"singular": [ "matriarchical", "matriarchal" ]
 		},
+		"terminology_adj2": {
+			"singular": [ "matrilineal" ]
+		},
 		"terminology_headoffamily": {
 			"singular": [ "matriarch" ]
 		},

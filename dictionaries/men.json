@@ -11,6 +11,9 @@
 		"terminology_adj": {
 			"singular": [ "patriarchical", "patriarchal" ]
 		},
+		"terminology_adj2": {
+			"singular": [ "patrilineal" ]
+		},
 		"terminology_headoffamily": {
 			"singular": [ "patriarch" ]
 		},
